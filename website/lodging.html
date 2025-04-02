@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lodging Options</title>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+
+  <!-- Tailwind CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+
+  <style>
+    .hero-section h1, .hero-section p {
+      background-color: rgba(0, 0, 0, 0.5);
+      padding: 8px 12px;
+      border-radius: 8px;
+    }
+        nav a {
+    position: relative;
+    color: white;
+    text-decoration: none;
+    padding-bottom: 4px;
+    transition: color 0.3s ease;
+    }
+
+    nav a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 100%;
+    background-color: #f97316; 
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+    }
+
+    nav a:hover::after {
+    transform: scaleX(1);
+    }
+    nav a:hover {
+    color: #f97316;
+    }
+
+  </style>
+</head>
+
+<body class="bg-gray-100 text-gray-900">
+  <!-- Header -->
+  <header class="bg-gradient-to-r from-blue-400 to-green-400 text-white shadow-md sticky top-0 z-40">
+    <div class="container mx-auto flex justify-between items-center p-4">
+      <h1 class="text-2xl font-bold">ExploreTaniti</h1>
+      <nav class="hidden md:flex space-x-4">
+        <a href="index.html">Home</a>
+        <a href="lodging.html">Lodging</a>
+        <a href="transportation.html">Transportation</a>
+        <a href="entertainment.html">Entertainment</a>
+        <a href="faqs.html">FAQs</a>
+        <a href="booking.html">Booking</a>
+      </nav>
+      <div class="relative">
+        <input type="text" placeholder="Search..." class="px-4 py-2 rounded-lg text-gray-800 border border-gray-300 focus:outline-none focus:ring focus:ring-blue-300" />
+        <button class="absolute right-0 top-0 h-full px-4 bg-blue-500 text-white rounded-r-lg hover:bg-blue-600">Search</button>
+      </div>
+    </div>
+  </header>
+
+    <!-- Hero -->
+    <div class="hero-section bg-cover bg-center h-80 flex flex-col justify-center items-center text-white text-center" style="background-image: url('images/lodging.jpg');">
+      <i class="fas fa-home text-5xl text-white animate-bounce mb-4"></i>
+      <h1 class="text-4xl font-bold">Lodging Options</h1>
+      <p class="mt-2 text-lg">Find the perfect stay for your Taniti getaway.</p>
+    </div>
+
+    <!-- Main Section -->
+    <main class="container mx-auto p-6 bg-white shadow-lg rounded-lg mt-6">
+      <h2 class="text-3xl font-semibold text-center mb-6">Lodging Options</h2>
+      <p class="text-lg text-gray-700 text-center mb-8">Explore a variety of lodging options, including luxury resorts, budget-friendly inns, and charming private condos with breathtaking views.</p>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <!-- Card 1 -->
+        <a href="https://example.com" target="_blank" rel="noopener noreferrer" class="block transform transition-transform duration-300 hover:scale-105">
+          <div class="bg-gray-100 rounded-lg shadow-md p-4">
+            <img src="images/lodging_2.jpg" alt="Hotel resort" class="h-60 w-full rounded mb-4 object-cover">
+            <h3 class="text-xl font-semibold mb-2">Browse Hotels</h3>
+            <p class="text-gray-600">The most luxurious hotels for a relaxing vacation!</p>
+          </div>
+        </a>
+
+        <!-- Card 2 -->
+        <a href="https://example.com" target="_blank" rel="noopener noreferrer" class="block transform transition-transform duration-300 hover:scale-105">
+          <div class="bg-gray-100 rounded-lg shadow-md p-4">
+            <img src="images/lodging_3.jpg" alt="Resort" class="h-60 w-full rounded mb-4 object-cover">
+            <h3 class="text-xl font-semibold mb-2">Browse Resorts</h3>
+            <p class="text-gray-600">Lovely resort with a private pool!</p>
+          </div>
+        </a>
+
+        <!-- Card 3 -->
+        <a href="https://example.com" target="_blank" rel="noopener noreferrer" class="block transform transition-transform duration-300 hover:scale-105">
+          <div class="bg-gray-100 rounded-lg shadow-md p-4">
+            <img src="images/lodging_4.jpg" alt="Private condo" class="h-60 w-full rounded mb-4 object-cover">
+            <h3 class="text-xl font-semibold mb-2">Browse Private Condos</h3>
+            <p class="text-gray-600">Private condos offering privacy and relaxation!</p>
+          </div>
+        </a>
+      </div>
+    </main>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-green-700 text-white text-center py-4 mt-6">
+    &copy; 2025 ExploreTaniti. All Rights Reserved. |
+    <a href="faqs.html" class="text-orange-300 hover:underline">FAQs</a> |
+    <a href="contact.html" class="text-orange-300 hover:underline">Contact Us</a>
+    <p class="text-sm mt-2">Images courtesy of <a href="https://www.pexels.com" class="text-orange-300 hover:underline" target="_blank">Pexels</a> and other licensed sources.</p>
+  </footer>
+</body>
+</html>

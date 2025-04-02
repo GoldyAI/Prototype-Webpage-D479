@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FAQs</title>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+
+  <!-- Tailwind CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+
+  <style>
+    .hero-section h1, .hero-section p {
+      background-color: rgba(0, 0, 0, 0.5);
+      padding: 8px 12px;
+      border-radius: 8px;
+    }
+        nav a {
+    position: relative;
+    color: white;
+    text-decoration: none;
+    padding-bottom: 4px;
+    transition: color 0.3s ease;
+    }
+
+    nav a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 100%;
+    background-color: #f97316; 
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+    }
+
+    nav a:hover::after {
+    transform: scaleX(1);
+    }
+
+    nav a:hover {
+    color: #f97316;
+    }
+  </style>
+</head>
+<body class="bg-gray-100 text-gray-900">
+
+  <!-- Header -->
+  <header class="bg-gradient-to-r from-blue-400 to-green-400 text-white shadow-md sticky top-0 z-40">
+    <div class="container mx-auto flex justify-between items-center p-4">
+      <h1 class="text-2xl font-bold">ExploreTaniti</h1>
+      <nav class="hidden md:flex space-x-4">
+        <a href="index.html">Home</a>
+        <a href="lodging.html">Lodging</a>
+        <a href="transportation.html">Transportation</a>
+        <a href="entertainment.html">Entertainment</a>
+        <a href="faqs.html">FAQs</a>
+        <a href="booking.html">Booking</a>
+      </nav>
+      <div class="relative">
+        <input type="text" placeholder="Search..." class="px-4 py-2 rounded-lg text-gray-800 border border-gray-300 focus:outline-none focus:ring focus:ring-blue-300" />
+        <button class="absolute right-0 top-0 h-full px-4 bg-blue-500 text-white rounded-r-lg hover:bg-blue-600">Search</button>
+      </div>
+    </div>
+  </header>
+
+    <!-- Hero Section -->
+    <div class="hero-section bg-cover bg-center h-80 flex flex-col justify-center items-center text-white text-center" style="background-image: url('images/faq.jpg');">
+      <div class="flex flex-row justify-center space-x-8 mb-4">
+        <i class="fas fa-passport text-5xl text-white animate-bounce"></i>
+        <i class="fas fa-info-circle text-5xl text-white animate-bounce"></i>
+        <i class="fas fa-map-signs text-5xl text-white animate-bounce"></i>
+      </div>
+      <h1 class="text-4xl font-bold">FAQs</h1>
+      <p class="mt-2 text-lg">Find answers to common questions about Taniti.</p>
+    </div>
+
+    <!-- Main Content -->
+    <main class="container mx-auto p-6 bg-white shadow-lg rounded-lg mt-6">
+      <h2 class="text-3xl font-semibold text-center mb-6">FAQs</h2>
+      <p class="text-lg text-gray-700 text-center mb-8">Below are answers to frequently asked questions to help you plan your trip to Taniti.</p>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <a href="https://example.com" target="_blank" rel="noopener noreferrer" class="block transform transition-transform duration-300 hover:scale-105">
+          <div class="bg-gray-100 rounded-lg shadow-md p-4">
+            <img src="images/faq_2.jpg" alt="Couple on beach" class="h-60 w-full rounded mb-4 object-cover">
+            <h3 class="text-xl font-semibold mb-2">Travel Requirements</h3>
+            <p class="text-gray-600">Learn what documents you need, vaccination policies, and tips to make your arrival stress-free.</p>
+          </div>
+        </a>
+        <a href="https://example.com" target="_blank" rel="noopener noreferrer" class="block transform transition-transform duration-300 hover:scale-105">
+          <div class="bg-gray-100 rounded-lg shadow-md p-4">
+            <img src="images/faq_3.jpg" alt="Map and compass" class="h-60 w-full rounded mb-4 object-cover">
+            <h3 class="text-xl font-semibold mb-2">Booking Information</h3>
+            <p class="text-gray-600">Get help with booking accommodations, tours, and activities — all in one convenient place.</p>
+          </div>
+        </a>
+        <a href="https://example.com" target="_blank" rel="noopener noreferrer" class="block transform transition-transform duration-300 hover:scale-105">
+          <div class="bg-gray-100 rounded-lg shadow-md p-4">
+            <img src="images/faq_4.jpg" alt="Maze image" class="h-60 w-full rounded mb-4 object-cover">
+            <h3 class="text-xl font-semibold mb-2">Island Tips & Essentials</h3>
+            <p class="text-gray-600">Wondering what to pack? Need a currency tip? We've got your travel basics covered. Don’t get lost like a maze!</p>
+          </div>
+        </a>
+      </div>
+
+      <!-- FAQ Section -->
+      <section class="mt-8">
+        <h3 class="text-2xl font-semibold mb-4">Frequently Asked Questions</h3>
+        <div class="space-y-4 text-gray-600">
+          <div><h4 class="font-semibold text-lg">What are the visa requirements for visiting Taniti?</h4><p>Tourists need a valid passport and may require a visa depending on the country of origin.</p></div>
+          <div><h4 class="font-semibold text-lg">Is Taniti safe for tourists?</h4><p>Yes, Taniti is known for being a safe and welcoming destination.</p></div>
+          <div><h4 class="font-semibold text-lg">What is the best time to visit Taniti?</h4><p>The best time to visit Taniti is between December and April when the weather is most favorable.</p></div>
+          <div><h4 class="font-semibold text-lg">What currency is used in Taniti?</h4><p>Taniti uses the U.S. dollar (USD), and most major credit cards are accepted.</p></div>
+          <div><h4 class="font-semibold text-lg">Is Wi-Fi available on the island?</h4><p>Yes, most hotels, resorts, and cafes offer free Wi-Fi. Some remote areas may have limited connectivity.</p></div>
+          <div><h4 class="font-semibold text-lg">Are there medical facilities on the island?</h4><p>Yes, there are clinics and a hospital in the main town. For emergencies, medical evacuation is available.</p></div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-green-700 text-white text-center py-4 mt-6">
+    &copy; 2025 ExploreTaniti. All Rights Reserved. |
+    <a href="faqs.html" class="text-orange-300 hover:underline">FAQs</a> |
+    <a href="contact.html" class="text-orange-300 hover:underline">Contact Us</a>
+    <p class="text-sm mt-2">Images courtesy of <a href="https://www.pexels.com" class="text-orange-300 hover:underline" target="_blank">Pexels</a> and other licensed sources.</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Welcome to Taniti</title>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+  <!-- Tailwind CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+
+  <style>
+    /* Preloader */
+    #preloader {
+      background: linear-gradient(to bottom, #bfdbfe, #99f6e4);
+      z-index: 9999;
+      opacity: 1;
+      transition: opacity 1s ease;
+    }
+    /* Base transitions */
+    nav a {
+        position: relative;
+        color: white;
+        text-decoration: none;
+        padding-bottom: 4px;
+        transition: color 0.3s ease;
+    }
+
+    /* Underline hover animation */
+    nav a::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        height: 3px;
+        width: 100%;
+        background-color: #f97316; 
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: transform 0.3s ease;
+    }
+
+    nav a:hover::after {
+        transform: scaleX(1);
+    }
+
+    nav a:hover {
+        color: #f97316; 
+    }
+
+    .hero-section h1, .hero-section p {
+      background-color: rgba(0, 0, 0, 0.5);
+      padding: 8px 12px;
+      border-radius: 8px;
+    }
+
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+
+    .animate-bounce {
+      animation: bounce 2s infinite;
+    }
+
+    .animate-bounce-slow {
+      animation: bounce 2.5s infinite;
+    }
+  </style>
+</head>
+<body class="bg-gray-100 text-gray-900">
+
+  <!-- Preloader Animation -->
+  <div id="preloader" class="fixed inset-0 z-50 flex flex-col items-center justify-center bg-gradient-to-b from-blue-200 to-teal-100 transition-opacity duration-1000">
+    <div class="animate-bounce text-yellow-400 text-6xl mb-2">
+      <i class="fas fa-sun"></i>
+    </div>
+    <div class="flex space-x-4">
+      <i class="fas fa-umbrella-beach text-4xl text-pink-500 animate-bounce-slow"></i>
+      <i class="fas fa-water text-4xl text-blue-500 animate-bounce-slow"></i>
+      <i class="fas fa-tree text-4xl text-green-500 animate-bounce-slow"></i>
+    </div>
+    <p class="mt-4 text-gray-800 font-semibold text-lg">Loading your Taniti experience...</p>
+  </div>
+
+  <!-- Header -->
+  <header class="bg-gradient-to-r from-blue-400 to-green-400 text-white shadow-md sticky top-0 z-50">
+    <div class="container mx-auto flex justify-between items-center p-4">
+      <h1 class="text-2xl font-bold">ExploreTaniti</h1>
+      <nav class="hidden md:flex space-x-4">
+        <a href="index.html">Home</a>
+        <a href="lodging.html">Lodging</a>
+        <a href="transportation.html">Transportation</a>
+        <a href="entertainment.html">Entertainment</a>
+        <a href="faqs.html">FAQs</a>
+        <a href="booking.html">Booking</a>
+      </nav>
+      <div class="relative">
+        <input type="text" placeholder="Search..." class="px-4 py-2 rounded-lg text-gray-800 border border-gray-300 focus:outline-none focus:ring focus:ring-blue-300" />
+        <button class="absolute right-0 top-0 h-full px-4 bg-blue-500 text-white rounded-r-lg hover:bg-blue-600">Search</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <div class="hero-section bg-cover bg-center h-80 flex flex-col justify-center items-center text-white text-center" style="background-image: url('images/homepage.jpg');">
+    <i class="fas fa-building text-5xl text-white animate-bounce mb-4"></i>
+    <h1 class="text-4xl font-bold">Welcome to Taniti</h1>
+    <p class="mt-2 text-lg">Explore the breathtaking beauty and adventure of Taniti Island.</p>
+  </div>
+
+  <!-- Main Content -->
+  <main class="container mx-auto p-6 bg-white shadow-lg rounded-lg mt-6">
+    <h2 class="text-3xl font-semibold text-center mb-6">Welcome to Taniti</h2>
+    <p class="text-lg text-gray-700 text-center mb-8">Taniti offers an unforgettable experience with its tropical climate, stunning beaches, and diverse cultural heritage. Discover unique adventures and relaxation opportunities.</p>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <!-- Card 1 -->
+      <a href="https://example.com" target="_blank" rel="noopener noreferrer" class="block transform transition-transform duration-300 hover:scale-105">
+        <div class="bg-gray-100 rounded-lg shadow-md p-4">
+          <img src="images/homepage_2.jpg" alt="Food Truck" class="h-60 w-full rounded mb-4 object-cover">
+          <h3 class="text-xl font-semibold mb-2">Food Experiences</h3>
+          <p class="text-gray-600">One of the many delicious local food locations!</p>
+        </div>
+      </a>
+
+      <!-- Card 2 -->
+      <a href="https://example.com" target="_blank" rel="noopener noreferrer" class="block transform transition-transform duration-300 hover:scale-105">
+        <div class="bg-gray-100 rounded-lg shadow-md p-4">
+          <img src="images/homepage_3.jpg" alt="Beach" class="h-60 w-full rounded mb-4 object-cover">
+          <h3 class="text-xl font-semibold mb-2">The beautiful beaches of Taniti</h3>
+          <p class="text-gray-600">A beautiful beach to relax and enjoy an amazing vacation with your loved ones!</p>
+        </div>
+      </a>
+
+      <!-- Card 3 -->
+      <a href="https://example.com" target="_blank" rel="noopener noreferrer" class="block transform transition-transform duration-300 hover:scale-105">
+        <div class="bg-gray-100 rounded-lg shadow-md p-4">
+          <img src="images/homepage_4.jpg" alt="Airplane" class="h-60 w-full rounded mb-4 object-cover">
+          <h3 class="text-xl font-semibold mb-2">A luxurious airplane drops you off right at your destination!</h3>
+          <p class="text-gray-600">Enjoy a scenic view of the whole island by taking on a beautiful plane ride, then come back right near your lodge!</p>
+        </div>
+      </a>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-green-700 text-white text-center py-4 mt-6">
+    &copy; 2025 ExploreTaniti. All Rights Reserved. |
+    <a href="faqs.html" class="text-orange-300 hover:underline">FAQs</a> |
+    <a href="contact.html" class="text-orange-300 hover:underline">Contact Us</a>
+    <p class="text-sm mt-2">Images courtesy of <a href="https://www.pexels.com" class="text-orange-300 hover:underline" target="_blank">Pexels</a> and other licensed sources.</p>
+  </footer>
+
+  <!---> Preloader Script -->
+  <script>
+    window.addEventListener("load", function () {
+      setTimeout(() => {
+        const preloader = document.getElementById("preloader");
+        preloader.style.opacity = "0";
+        setTimeout(() => {
+          preloader.style.display = "none";
+        }, 1000);
+      }, 1000);
+    });
+  </script>
+</body>
+</html>
